@@ -1,0 +1,26 @@
+{
+  "name": "ndm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "clear": "rimraf 'packages/*/{lib,node_modules}' && rimraf node_modules",
+    "preinstall": "npx only-allow pnpm",
+    "changeset": "changeset",
+    "changeset:version": "changeset version",
+    "changeset:publish": "changeset publish",
+    "release": "npm run changeset && npm run changeset:version && npm run changeset:publish"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.24.1",
+    "rimraf": "^3.0.2",
+    "webpack": "^5.74.0"
+  }
+}
